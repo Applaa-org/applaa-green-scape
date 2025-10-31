@@ -13,88 +13,115 @@ const Services = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Professional Services
-<dyad-problem-report summary="2 problems">
-<problem file="src/App.tsx" line="46" column="106" code="2304">Cannot find name 'Privacy'.</problem>
-<problem file="src/App.tsx" line="47" column="102" code="2304">Cannot find name 'Terms'.</problem>
-</dyad-problem-report>
+          </h1>
+          <p className="text-xl text-green-50 max-w-3xl mx-auto">
+            Comprehensive gardening and landscaping solutions tailored to transform your outdoor space
+          </p>
+        </div>
+      </section>
 
-<applaa-write path="src/App.tsx" description="App component with privacy and terms routes imported">
-import * as React from 'react'
-import { 
-  createRouter, 
-  RouterProvider, 
-  createRootRoute, 
-  createRoute as createTanStackRoute, 
-  Outlet 
-} from '@tanstack/react-router'
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
+                <CardHeader className="text-center pb-4">
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <div className="text-green-600 font-semibold text-lg">{service.price}</div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-600">{service.description}</p>
+                  
+                  {service.features && (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-gray-900">What's Included:</h4>
+                      <ul className="space-y-1">
+                        {service.features.map((feature, index) => (
+                          <li key={index} className="flex items-center space-x-2 text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  <Button className="w-full bg-green-600 hover:bg-green-700" asChild>
+                    <Link to="/contact">
+                      Get a Quote
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-import { Layout } from '@/components/Layout';
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Portfolio from "./pages/Portfolio";
-import Testimonials from "./pages/Testimonials";
-import Contact from "./pages/Contact";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import NotFound from './pages/NotFound';
+      {/* Process Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Simple, transparent process from consultation to completion
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">1</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Free Consultation</h3>
+              <p className="text-gray-600">We visit your site to understand your needs and assess the space</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">2</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Detailed Quote</h3>
+              <p className="text-gray-600">Receive a comprehensive, no-obligation quote tailored to your budget</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">3</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Professional Work</h3>
+              <p className="text-gray-600">Our expert team delivers high-quality work with minimal disruption</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">4</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Final Inspection</h3>
+              <p className="text-gray-600">We ensure everything meets your complete satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-const queryClient = new QueryClient();
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-green-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Garden?
+          </h2>
+          <p className="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
+            Contact us today for a free, no-obligation consultation and let's create the outdoor space of your dreams.
+          </p>
+          <Button size="lg" className="bg-white text-green-600 hover:bg-green-50" asChild>
+            <Link to="/contact">
+              Get Your Free Quote
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-// Create root route with layout
-const rootRoute = createRootRoute({
-  component: () => (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Layout />
-        <Toaster />
-        <Sonner />
-      </TooltipProvider>
-    </QueryClientProvider>
-  ),
-  notFoundComponent: NotFound,
-})
-
-// Create page routes
-const indexRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/', component: Index });
-const aboutRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/about', component: About });
-const servicesRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/services', component: Services });
-const portfolioRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/portfolio', component: Portfolio });
-const testimonialsRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/testimonials', component: Testimonials });
-const contactRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/contact', component: Contact });
-const privacyRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/privacy', component: Privacy });
-const termsRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/terms', component: Terms });
-
-// Create route tree
-const routeTree = rootRoute.addChildren([
-  indexRoute,
-  aboutRoute,
-  servicesRoute,
-  portfolioRoute,
-  testimonialsRoute,
-  contactRoute,
-  privacyRoute,
-  termsRoute,
-])
-
-// Create router
-const router = createRouter({ 
-  routeTree,
-  defaultPreload: 'intent' as const,
-  defaultPreloadStaleTime: 0,
-})
-
-// Register router for type safety
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: typeof router
-  }
-}
-
-const App = () => <RouterProvider router={router} />
-
-export default App;
+export default Services;
