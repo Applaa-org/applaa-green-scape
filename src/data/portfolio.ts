@@ -1,59 +1,62 @@
-export type PortfolioItem = {
-  id: number;
-  title: string;
-  category: string;
-  beforeImage: string;
-  afterImage: string;
-  description: string;
-};
-
-export const portfolioItems: PortfolioItem[] = [
+export const portfolioProjects = [
   {
     id: 1,
-    title: "Modern Family Garden",
-    category: "Landscape Design",
-    beforeImage: "https://picsum.photos/seed/before1/800/600",
-    afterImage: "https://picsum.photos/seed/after1/800/600",
-    description: "Transformed a neglected backyard into a vibrant, modern space for the whole family to enjoy, featuring a new lawn, patio, and raised flower beds.",
+    title: "Modern Garden Transformation",
+    location: "Surrey",
+    beforeImage: "https://picsum.photos/800/600?random=1",
+    afterImage: "https://picsum.photos/800/600?random=2",
+    description: "Complete garden redesign with contemporary patio, raised planters, and automated lighting system.",
+    services: ["Landscape Design", "Patio Design", "Planting & Borders"],
+    completedDate: "March 2024"
   },
   {
     id: 2,
-    title: "Urban Courtyard Oasis",
-    category: "Patio & Decking",
-    beforeImage: "https://picsum.photos/seed/before2/800/600",
-    afterImage: "https://picsum.photos/seed/after2/800/600",
-    description: "Created a low-maintenance, stylish courtyard with composite decking, vertical planting, and ambient lighting.",
+    title: "Family Garden Makeover",
+    location: "Kent",
+    beforeImage: "https://picsum.photos/800/600?random=3",
+    afterImage: "https://picsum.photos/800/600?random=4",
+    description: "Created a family-friendly garden with lawn area, vegetable patch, and safe play zone for children.",
+    services: ["Lawn Care", "Planting & Borders", "Garden Maintenance"],
+    completedDate: "February 2024"
   },
   {
     id: 3,
-    title: "Lush Lawn Restoration",
-    category: "Lawn Care",
-    beforeImage: "https://picsum.photos/seed/before3/800/600",
-    afterImage: "https://picsum.photos/seed/after3/800/600",
-    description: "Revitalized a patchy, weed-infested lawn into a thick, green carpet through intensive treatment and a new care regimen.",
+    title: "Cottage Garden Restoration",
+    location: "Sussex",
+    beforeImage: "https://picsum.photos/800/600?random=5",
+    afterImage: "https://picsum.photos/800/600?random=6",
+    description: "Restored traditional cottage garden with herbaceous borders, rose arches, and wildflower meadow.",
+    services: ["Garden Maintenance", "Planting & Borders", "Tree Surgery"],
+    completedDate: "January 2024"
   },
   {
     id: 4,
-    title: "Country Cottage Garden",
-    category: "Planting & Softscaping",
-    beforeImage: "https://picsum.photos/seed/before4/800/600",
-    afterImage: "https://picsum.photos/seed/after4/800/600",
-    description: "Designed and planted a classic cottage garden with a mix of perennials, shrubs, and climbing roses for year-round color.",
+    title: "Urban Courtyard Design",
+    location: "London",
+    beforeImage: "https://picsum.photos/800/600?random=7",
+    afterImage: "https://picsum.photos/800/600?random=8",
+    description: "Transformed small urban space into stylish courtyard with vertical planting and bespoke seating.",
+    services: ["Landscape Design", "Patio Design", "Planting & Borders"],
+    completedDate: "December 2023"
   },
   {
     id: 5,
-    title: "Sleek Slate Patio",
-    category: "Patio & Decking",
-    beforeImage: "https://picsum.photos/seed/before5/800/600",
-    afterImage: "https://picsum.photos/seed/after5/800/600",
-    description: "Installed a contemporary slate patio, providing a perfect area for outdoor dining and entertainment.",
+    title: "Large Estate Grounds",
+    location: "Hampshire",
+    beforeImage: "https://picsum.photos/800/600?random=9",
+    afterImage: "https://picsum.photos/800/600?random=10",
+    description: "Comprehensive grounds maintenance and improvement for 5-acre country estate.",
+    services: ["Garden Maintenance", "Lawn Care", "Tree Surgery"],
+    completedDate: "November 2023"
   },
   {
     id: 6,
-    title: "Privacy Fencing Solution",
-    category: "Fencing & Gates",
-    beforeImage: "https://picsum.photos/seed/before6/800/600",
-    afterImage: "https://picsum.photos/seed/after6/800/600",
-    description: "Erected a durable and attractive cedar fence to provide privacy and security for a terraced property.",
-  },
+    title: "Water Feature Installation",
+    location: "Berkshire",
+    beforeImage: "https://picsum.photos/800/600?random=11",
+    afterImage: "https://picsum.photos/800/600?random=12",
+    description: "Designed and installed custom pond and water feature with surrounding planting scheme.",
+    services: ["Landscape Design", "Planting & Borders"],
+    completedDate: "October 2023"
+  }
 ];

@@ -1,8 +1,8 @@
 import { Outlet } from '@tanstack/react-router';
-import { Header } from './Header';
-import { Footer } from './Footer';
-import { CookieConsent } from './CookieConsent';
-import { StickyQuoteButton } from './StickyQuoteButton';
+import Header from './Header';
+import Footer from './Footer';
+import CookieConsent from './CookieConsent';
+import StickyQuoteButton from './StickyQuoteButton';
 
 export function Layout() {
   return (

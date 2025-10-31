@@ -20,7 +20,6 @@ import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import NotFound from './pages/NotFound';
 
-
 const queryClient = new QueryClient();
 
 // Create root route with layout
@@ -44,7 +43,8 @@ const servicesRoute = createTanStackRoute({ getParentRoute: () => rootRoute, pat
 const portfolioRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/portfolio', component: Portfolio });
 const testimonialsRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/testimonials', component: Testimonials });
 const contactRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/contact', component: Contact });
-
+const privacyRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/privacy', component: Privacy });
+const termsRoute = createTanStackRoute({ getParentRoute: () => rootRoute, path: '/terms', component: Terms });
 
 // Create route tree
 const routeTree = rootRoute.addChildren([
@@ -54,6 +54,8 @@ const routeTree = rootRoute.addChildren([
   portfolioRoute,
   testimonialsRoute,
   contactRoute,
+  privacyRoute,
+  termsRoute,
 ])
 
 // Create router

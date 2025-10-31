@@ -1,51 +1,56 @@
-export type Testimonial = {
-  id: number;
-  name: string;
-  location: string;
-  rating: number;
-  comment: string;
-  avatar: string;
-};
-
-export const testimonials: Testimonial[] = [
+export const testimonials = [
   {
     id: 1,
-    name: "Sarah J.",
+    name: "Sarah Thompson",
     location: "Surrey",
     rating: 5,
-    comment: "Green Scape completely transformed our garden! The team was professional, creative, and finished the project on time and on budget. We couldn't be happier.",
-    avatar: "https://i.pravatar.cc/150?img=1",
+    comment: "Green Scape transformed our garden beyond our expectations. The team was professional, creative, and attention to detail was outstanding. Highly recommend!",
+    project: "Modern Garden Transformation",
+    date: "March 2024"
   },
   {
     id: 2,
-    name: "David L.",
+    name: "Michael Roberts",
     location: "Kent",
     rating: 5,
-    comment: "The regular maintenance service is fantastic. Our lawn has never looked better, and the team is always friendly and reliable. Highly recommended.",
-    avatar: "https://i.pravatar.cc/150?img=2",
+    comment: "Excellent service from start to finish. Our new patio and garden design has completely changed how we use our outdoor space. Worth every penny!",
+    project: "Family Garden Makeover",
+    date: "February 2024"
   },
   {
     id: 3,
-    name: "Emily R.",
-    location: "London",
+    name: "Emma Wilson",
+    location: "Sussex",
     rating: 5,
-    comment: "Our new patio is stunning. The quality of the workmanship is top-notch, and it has become our favourite spot to relax.",
-    avatar: "https://i.pravatar.cc/150?img=3",
+    comment: "The team restored our cottage garden beautifully. They understood exactly what we wanted and delivered exceptional results. Our garden has never looked better!",
+    project: "Cottage Garden Restoration",
+    date: "January 2024"
   },
   {
     id: 4,
-    name: "Mark T.",
-    location: "Hertfordshire",
-    rating: 4,
-    comment: "A very positive experience. The team provided a great design and were very knowledgeable about plants. A few minor delays but the end result was worth it.",
-    avatar: "https://i.pravatar.cc/150?img=4",
+    name: "David Chen",
+    location: "London",
+    rating: 5,
+    comment: "Amazing work on our small urban courtyard. They maximized every inch of space and created something truly special. Very impressed with the design and execution.",
+    project: "Urban Courtyard Design",
+    date: "December 2023"
   },
   {
     id: 5,
-    name: "Jessica P.",
-    location: "Essex",
+    name: "Jennifer Foster",
+    location: "Hampshire",
     rating: 5,
-    comment: "From the initial consultation to the final planting, Green Scape was a pleasure to work with. They listened to our ideas and brought our vision to life.",
-    avatar: "https://i.pravatar.cc/150?img=5",
+    comment: "Reliable, professional, and excellent quality of work. They've been maintaining our estate grounds for over a year and we couldn't be happier.",
+    project: "Large Estate Grounds",
+    date: "November 2023"
   },
+  {
+    id: 6,
+    name: "Robert Taylor",
+    location: "Berkshire",
+    rating: 5,
+    comment: "The water feature installation was flawless. The team's expertise and craftsmanship is evident in every aspect of the project. Absolutely delighted!",
+    project: "Water Feature Installation",
+    date: "October 2023"
+  }
 ];
