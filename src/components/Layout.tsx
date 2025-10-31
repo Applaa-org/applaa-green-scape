@@ -1,21 +1,19 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import { MadeWithApplaa } from './made-with-applaa';
+import { Outlet } from '@tanstack/react-router';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { CookieConsent } from './CookieConsent';
+import { StickyQuoteButton } from './StickyQuoteButton';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export function Layout() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow">
+        <Outlet />
+      </main>
       <Footer />
-      <MadeWithApplaa />
+      <CookieConsent />
+      <StickyQuoteButton />
     </div>
   );
-};
-
-export default Layout;
+}

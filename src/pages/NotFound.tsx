@@ -1,31 +1,15 @@
-import { useRouterState } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Link } from "@tanstack/react-router";
+import { Link } from '@tanstack/react-router';
 
 const NotFound = () => {
-  const { location } = useRouterState();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname,
-    );
-  }, [location.pathname]);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center p-8">
-        <h1 className="text-9xl font-black text-primary">404</h1>
-        <p className="text-2xl md:text-3xl font-bold tracking-tight text-foreground/80 mt-4">
-          Oops! Page not found
-        </p>
-        <p className="mt-4 text-lg text-muted-foreground">
-          The page you are looking for does not exist or has been moved.
-        </p>
-        <Button asChild className="mt-8">
-          <Link to="/">Return to Home</Link>
-        </Button>
+    <div className="min-h-[60vh] flex items-center justify-center bg-gray-50">
+      <div className="text-center container py-16">
+        <h1 className="text-6xl font-bold text-green-700 mb-4">404</h1>
+        <p className="text-2xl text-gray-700 mb-6">Oops! Page not found</p>
+        <p className="text-gray-500 mb-8">The page you are looking for might have been removed or is temporarily unavailable.</p>
+        <Link to="/" className="inline-block bg-green-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-800 transition-colors">
+          Return to Home
+        </Link>
       </div>
     </div>
   );
